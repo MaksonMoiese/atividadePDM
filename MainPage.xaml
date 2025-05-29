@@ -6,34 +6,34 @@
     BackgroundColor="White">
 
     <ScrollView>
-        <StackLayout Margin="40,40,40,40">
+        <StackLayout Margin="40">
             <VerticalStackLayout>
                 <Label Text="Nome:" TextColor="Black" />
                 <Entry Placeholder="Digite seu nome" TextColor="Black" />
+
                 <Label Text="CPF:" TextColor="Black" />
                 <Entry Placeholder="Digite seu Cpf" TextColor="Black" />
+
                 <Label Text="Endereço:" TextColor="Black" />
                 <Entry Placeholder="Digite seu endereço" TextColor="Black" />
+
                 <Label Text="Senha:" TextColor="Black" />
                 <Entry
                     IsPassword="True"
                     Placeholder="Digite sua senha"
                     TextColor="Black" />
             </VerticalStackLayout>
-            <HorizontalStackLayout>
-                <Button
-                    Margin="680,0,0,20"
-                    Clicked="Salvar"
-                    Text="Salvar" />
-                <Button
-                    Margin="20,0,20,20"
-                    Clicked="Limpar"
-                    Text="Limpar" />
+
+            <HorizontalStackLayout
+                Margin="0,20,0,0"
+                HorizontalOptions="End"
+                Spacing="10">
+                <Button Clicked="Salvar" Text="Salvar" />
+                <Button Clicked="Limpar" Text="Limpar" />
             </HorizontalStackLayout>
+
+
         </StackLayout>
     </ScrollView>
-
-
-
 
 </ContentPage>
