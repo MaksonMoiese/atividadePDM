@@ -11,8 +11,12 @@
         public void Salvar(object sender, EventArgs e)
         {
 
+           
+
+         
+
             DisplayAlert("Item salvo",
-                "O cadastro de  foi salvo",
+                "O cadastro  foi salvo",
                 "ok");
             
         }    
@@ -23,6 +27,7 @@
                 "sim","não");
             if (resposta)
             {
+
                
                 await DisplayAlert("Apagou","Tudo foi apagado","OK");
             }

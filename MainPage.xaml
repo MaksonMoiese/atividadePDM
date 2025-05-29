@@ -7,21 +7,20 @@
     <ScrollView>
         <StackLayout Margin="40">
             <VerticalStackLayout>
-                <Label Text="Nome:" TextColor="Black" />
-                <Entry Placeholder="Digite seu nome" TextColor="Black" />
+                <Label Text="Nome:" />
+                <Entry Placeholder="Digite seu nome" />
 
-                <Label Text="CPF:" TextColor="Black" />
-                <Entry Placeholder="Digite seu Cpf" TextColor="Black" />
+                <Label Text="CPF:" />
+                <Entry Placeholder="Digite seu Cpf" />
 
-                <Label Text="Endereço:" TextColor="Black" />
-                <Entry Placeholder="Digite seu endereço" TextColor="Black" />
+                <Label Text="Endereço:" />
+                <Entry Placeholder="Digite seu endereço" />
 
-                <Label Text="Senha:" TextColor="Black" />
-                <Entry
-                    IsPassword="True"
-                    Placeholder="Digite sua senha"
-                    TextColor="Black" />
+                <Label Text="Senha:" />
+                <Entry IsPassword="True" Placeholder="Digite sua senha" />
             </VerticalStackLayout>
+
+
 
             <HorizontalStackLayout
                 Margin="0,20,0,0"
