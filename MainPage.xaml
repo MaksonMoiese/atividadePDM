@@ -23,21 +23,6 @@
                     Placeholder="Digite sua senha" />
             </VerticalStackLayout>
 
-            <VerticalStackLayout>
-                <StackLayout>
-                    <Label Text="Cadastro" />
-
-                    <Frame CornerRadius="5">
-                        <StackLayout>
-                            <Label x:Name="Nome" />
-                            <Label x:Name="CPF" />
-                            <Label x:Name="Endereco" />
-                            <Label x:Name="Senha" />
-                        </StackLayout>
-                    </Frame>
-                </StackLayout>
-            </VerticalStackLayout>
-
 
 
             <HorizontalStackLayout
@@ -46,6 +31,7 @@
                 Spacing="10">
                 <Button Clicked="Salvar" Text="Salvar" />
                 <Button Clicked="Limpar" Text="Limpar" />
+                <Button Clicked="Novo" Text="Ver Pessoas" />
             </HorizontalStackLayout>
 
 

@@ -1,7 +1,13 @@
-﻿namespace ProjetoElemento
+﻿using ProjetoElemento.Models;
+using ProjetoElemento.Views;
+
+
+namespace ProjetoElemento   
 {
     public partial class MainPage : ContentPage
     {
+        Pessoa pessoa =  new Pessoa();
+       
 
         public MainPage()
         {
@@ -10,29 +16,20 @@
         
         public void Salvar(object sender, EventArgs e)
         {
-            var _nome = nome.Text;
-            var _cpf = cpf.Text;
-            var _endereco = endereco.Text; 
-            var _senha = senha.Text;
-           
-            if (string.IsNullOrEmpty(_nome)
-                && string.IsNullOrEmpty(_cpf) &&
-                string.IsNullOrEmpty(_senha)) { 
-            DisplayAlert("Item faltante",
-                "Algum item não foi preenchido",
-                "ok");
-            }
-            else { 
-            DisplayAlert("Item salvo",
-                "O cadastro " + _nome + " foi salvo",
-                "ok");
-                Nome.Text = _nome;
-                CPF.Text = _cpf;
-                Endereco.Text = _endereco;
-                Senha.Text = _senha;
-            }
+         pessoa.Nome = nome.Text;
+         pessoa.Cpf = cpf.Text;
+         pessoa.Endereco = endereco.Text;
+         pessoa.Senha = senha.Text;
+
+            var resposta = pessoa.Salva(pessoa);
+
+            DisplayAlert("Aviso",resposta,"OK");
             
         }    
+        public async void Novo(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync( new Show(pessoa));
+        }
         public async void Limpar(object sender, EventArgs e)
         {
             var resposta = await DisplayAlert("Tem Certeza?",
