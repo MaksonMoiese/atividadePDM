@@ -1,5 +1,5 @@
 ﻿using ProjetoElemento.Models;
-using ProjetoElemento.Views;
+
 
 
 namespace ProjetoElemento   
@@ -16,20 +16,10 @@ namespace ProjetoElemento
         
         public void Salvar(object sender, EventArgs e)
         {
-         pessoa.Nome = nome.Text;
-         pessoa.Cpf = cpf.Text;
-         pessoa.Endereco = endereco.Text;
-         pessoa.Senha = senha.Text;
-
-            var resposta = pessoa.Salva(pessoa);
-
-            DisplayAlert("Aviso",resposta,"OK");
+         
             
         }    
-        public async void Novo(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync( new Show(pessoa));
-        }
+       
         public async void Limpar(object sender, EventArgs e)
         {
             var resposta = await DisplayAlert("Tem Certeza?",
