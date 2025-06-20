@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ProjetoElemento.View.Show"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Show">
+    <VerticalStackLayout Padding="20">
+        <Frame>
+            <StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Nome: " />
+                    <Label x:Name="show_name" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="CPF: " />
+                    <Label x:Name="show_cpf" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Endereço: " />
+                    <Label x:Name="show_endereco" />
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+
+    </VerticalStackLayout>
+</ContentPage>
