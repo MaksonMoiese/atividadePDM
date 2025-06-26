@@ -1,14 +1,13 @@
 using ProjetoElemento.Models;
+using System.Collections.ObjectModel;
 
 namespace ProjetoElemento.View;
 
 public partial class Show : ContentPage
 {
-	public Show(Pessoa pessoa)
+	public Show(ObservableCollection<Pessoa> pessoa)
 	{
 		InitializeComponent();
-		show_name.Text = " "+pessoa.Nome;
-        show_cpf.Text = " " + pessoa.Cpf;
-        show_endereco.Text = " " + pessoa.Endereco;
+		listaPessoas.ItemsSource = pessoa;      
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,6 +9,7 @@ namespace ProjetoElemento.Models
 {
     public class Pessoa
     {
+      
         private string nome;
         private string cpf;
         private string endereco;
@@ -20,11 +22,13 @@ namespace ProjetoElemento.Models
 
         public string Salva(Pessoa pessoa)
         {
+           
 
             if (string.IsNullOrEmpty(pessoa.Nome) ||
                     string.IsNullOrEmpty(pessoa.Cpf) ||
                     string.IsNullOrEmpty(pessoa.Senha))
             {
+               
                 return "Um dos campos obrigatórios não foi preenchido";
             }
             else

@@ -4,23 +4,43 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="Show">
-    <VerticalStackLayout Padding="20">
-        <Frame>
-            <StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="Nome: " />
-                    <Label x:Name="show_name" />
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="CPF: " />
-                    <Label x:Name="show_cpf" />
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="Endereço: " />
-                    <Label x:Name="show_endereco" />
-                </StackLayout>
-            </StackLayout>
-        </Frame>
+    <ScrollView>
+        <VerticalStackLayout Padding="20">
+            <Frame CornerRadius="10">
+                <StackLayout>
+                    <ListView x:Name="listaPessoas">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Padding="10" Spacing="10">
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="Nome: " />
+                                            <Label FontAttributes="Bold" Text="{Binding Nome}" />
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="CPF: " />
+                                            <Label FontSize="12" Text="{Binding Cpf}" />
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label FontSize="12" Text="{Binding Endereco}" />
+                                        </StackLayout>
+                                        <StackLayout HorizontalOptions="End">
+                                            <Button Text="Apagar" />
+                                        </StackLayout>
+                                        <BoxView
+                                            Margin="0,10,0,0"
+                                            BackgroundColor="Gray"
+                                            HeightRequest="1"
+                                            HorizontalOptions="FillAndExpand" />
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
 
-    </VerticalStackLayout>
+                </StackLayout>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
