@@ -7,7 +7,9 @@ namespace ProjetoElemento
 {
     public partial class MainPage : ContentPage
     {
-        ObservableCollection<Pessoa> pessoas = new ObservableCollection<Pessoa>();
+        //List<Pessoa> listaPessoas = new List<Pessoa>();
+        ObservableCollection<Pessoa> listaPessoas = new ObservableCollection<Pessoa>();
+       
         
          public MainPage()
         {
@@ -16,20 +18,18 @@ namespace ProjetoElemento
 
         public void Salvar(object sender, EventArgs e)
         {
-
-            var novaPessoa = new Pessoa
+            var pessoa = new Pessoa
             {
                 Nome = nome.Text,
                 Cpf = cpf.Text,
-                Endereco = endereco.Text,  
+                Endereco = endereco.Text,
                 Senha = senha.Text,
             };
-            pessoas.Add(novaPessoa);
+            var resposta = pessoa.Salva(pessoa);
+            listaPessoas.Add(pessoa);
 
-            var resposta = novaPessoa.Salva(novaPessoa);
-            DisplayAlert("Aviso",resposta,"Ok");
-            ApagaTudo();    
-
+            DisplayAlert("Aviso", resposta, "OK");
+            ApagaTudo();
 
         }
 
@@ -37,7 +37,7 @@ namespace ProjetoElemento
         
         public async void Novo(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Show(pessoas));
+            await Navigation.PushAsync(new Show(listaPessoas));
         }
         public async void Limpar(object sender, EventArgs e)
         {

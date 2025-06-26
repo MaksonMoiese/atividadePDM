@@ -8,6 +8,7 @@ public partial class Show : ContentPage
 	public Show(ObservableCollection<Pessoa> pessoa)
 	{
 		InitializeComponent();
-		listaPessoas.ItemsSource = pessoa;      
+		listaPessoas.ItemsSource = pessoa;
+		    
     }
 }
