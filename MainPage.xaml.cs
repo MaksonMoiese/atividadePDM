@@ -1,6 +1,6 @@
 ﻿using ProjetoElemento.Models;
-using ProjetoElemento.View;
 using System.Collections.ObjectModel;
+using ProjetoElemento.View;
 
 
 namespace ProjetoElemento
@@ -8,58 +8,20 @@ namespace ProjetoElemento
     public partial class MainPage : ContentPage
     {
         //List<Pessoa> listaPessoas = new List<Pessoa>();
-        ObservableCollection<Pessoa> listaPessoas = new ObservableCollection<Pessoa>();
-       
-        
-         public MainPage()
+        ObservableCollection<Animal> listaAnimais = new ObservableCollection<Animal>();
+        public MainPage()
         {
             InitializeComponent();
         }
 
-        public void Salvar(object sender, EventArgs e)
+        public async void Mostrar(object sender, EventArgs e)
         {
-            var pessoa = new Pessoa
-            {
-                Nome = nome.Text,
-                Cpf = cpf.Text,
-                Endereco = endereco.Text,
-                Senha = senha.Text,
-            };
-            var resposta = pessoa.Salva(pessoa);
-            listaPessoas.Add(pessoa);
-
-            DisplayAlert("Aviso", resposta, "OK");
-            ApagaTudo();
-
+            await Navigation.PushAsync(new Show(listaAnimais));
         }
-
-
-        
-        public async void Novo(object sender, EventArgs e)
+        public async void Cadastrar(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Show(listaPessoas));
+            await Navigation.PushAsync(new Cadastro(listaAnimais));
         }
-        public async void Limpar(object sender, EventArgs e)
-        {
-            var resposta = await DisplayAlert("Tem Certeza?",
-                "Todo o conteúdo do formulário será perdido",
-                "sim", "não");
-            if (resposta)
-            {
-                ApagaTudo();
-
-                 await DisplayAlert("Apagou", "Tudo foi apagado", "OK");
-            }
-        }
-
-        public void ApagaTudo()
-        {
-            nome.Text = "";
-            cpf.Text = "";
-            endereco.Text = "";
-            senha.Text = "";
-        }
-
     }
 
 }

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ProjetoElemento.Cadastro"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <ScrollView>
+        <StackLayout Margin="40">
+            <VerticalStackLayout>
+                <Label Text="Nome:" />
+                <Entry x:Name="nome" Placeholder="Digite o nome do pet" />
+
+                <Label Text="Idade:" />
+                <Entry x:Name="idade" Placeholder="Digite a idade do pet" />
+
+                <Label Text="Dono:" />
+                <Entry x:Name="dono" Placeholder="Digite o nome do dono" />
+
+                <Label Text="Espécie:" />
+                <Entry x:Name="especie" Placeholder="Digite a espécie" />
+
+                <Label Text="Motivo" />
+                <Entry x:Name="motivo" Placeholder="Digite o motivo" />
+                
+            </VerticalStackLayout>
+            <HorizontalStackLayout
+                Margin="0,20,0,0"
+                HorizontalOptions="End"
+                Spacing="10">
+                <Button Clicked="Salvar" Text="Salvar" />
+                <Button Clicked="Limpar" Text="Limpar" />
+            </HorizontalStackLayout>
+
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

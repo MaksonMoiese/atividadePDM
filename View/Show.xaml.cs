@@ -1,14 +1,15 @@
 using ProjetoElemento.Models;
 using System.Collections.ObjectModel;
 
+
 namespace ProjetoElemento.View;
 
 public partial class Show : ContentPage
 {
-	public Show(ObservableCollection<Pessoa> pessoa)
+	public Show(ObservableCollection<Animal> animal)
 	{
-		InitializeComponent();
-		listaPessoas.ItemsSource = pessoa;
+        InitializeComponent();
+		listaAnimais.ItemsSource = animal;
 		    
     }
 }
