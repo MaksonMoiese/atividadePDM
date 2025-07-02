@@ -12,6 +12,7 @@
                        HorizontalOptions="Center" 
                        Margin="0,0,0,20"/>
                 <Button Clicked="Mostrar" Text="Ver Animais"/>
+                <Label/>
                 <Button Clicked="Cadastrar" Text="Cadastrar Animais"/>
             </VerticalStackLayout>
         </StackLayout>

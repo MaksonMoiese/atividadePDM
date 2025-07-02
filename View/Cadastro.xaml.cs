@@ -41,6 +41,8 @@ namespace ProjetoElemento
             dono.Text = string.Empty;
             especie.Text = string.Empty;
             motivo.Text = string.Empty;
+
+            DisplayAlert("Aviso", "Campos Limpos com sucesso", "OK");
         }
     }
 }
