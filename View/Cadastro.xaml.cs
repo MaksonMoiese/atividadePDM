@@ -15,6 +15,7 @@ namespace ProjetoElemento
         public Cadastro(ObservableCollection<Animal> listaAnimais)
         {
             InitializeComponent();
+            this.listaAnimais = listaAnimais;
         }
 
         private void Salvar(object sender, EventArgs e)

@@ -13,7 +13,7 @@
                            FontSize="Large"
                            HorizontalOptions="Center"/>
                     
-                    <CollectionView x:Name="listaAnimais">
+                    <CollectionView x:Name="listaAnimais" ItemsSource="{Binding}">
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
                                 <Frame Padding="10"
