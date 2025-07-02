@@ -12,13 +12,15 @@ namespace ProjetoElemento
         public MainPage()
         {
             InitializeComponent();
+            
         }
 
         public async void Mostrar(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Show(listaAnimais));
         }
-        public async void Cadastrar(object sender, EventArgs e)
+
+        public async void Cadastrar(object? sender, EventArgs e) // Add nullable annotation to sender
         {
             await Navigation.PushAsync(new Cadastro(listaAnimais));
         }

@@ -14,11 +14,11 @@ namespace ProjetoElemento.Models
         private string dono;
         private string especie;
         private string motivo;
-        public string Nome { get => nome; set => nome = value; }
-        public string Idade { get => idade; set => idade = value; }
-        public string Dono { get => dono; set => dono = value; }
-        public string Especie { get => especie; set => especie = value; }
-        public string Motivo { get => motivo; set => motivo = value; }
+        public required string Nome { get => nome; set => nome = value; }
+        public required string Idade { get => idade; set => idade = value; }
+        public required string Dono { get => dono; set => dono = value; }
+        public required string Especie { get => especie; set => especie = value; }
+        public required string Motivo { get => motivo; set => motivo = value; }
         public string Salva(Animal animal)
         {
             if (string.IsNullOrEmpty(animal.Nome) ||

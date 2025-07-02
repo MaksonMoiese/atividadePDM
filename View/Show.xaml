@@ -9,10 +9,16 @@
         <VerticalStackLayout Padding="20">
             <Frame CornerRadius="10">
                 <StackLayout>
-                    <ListView x:Name="listaAnimais">
-                        <ListView.ItemTemplate>
+                    <Label Text="Pets Cadastrados"
+                           FontSize="Large"
+                           HorizontalOptions="Center"/>
+                    
+                    <CollectionView x:Name="listaAnimais">
+                        <CollectionView.ItemTemplate>
                             <DataTemplate>
-                                <ViewCell>
+                                <Frame Padding="10"
+                                       CornerRadius="10"
+                                       Margin="0,0,0,10">
                                     <StackLayout Padding="10" Spacing="10">
                                         
                                         <StackLayout Orientation="Horizontal">
@@ -39,21 +45,11 @@
                                             <Label Text="Motivo: " />
                                             <Label FontSize="12" Text="{Binding Motivo}" />
                                         </StackLayout>
-                                        
-                                        <StackLayout HorizontalOptions="End">
-                                            <Button Text="Apagar" />
-                                        </StackLayout>
-                                        
-                                        
-                                        <BoxView
-                                            Margin="0,10,0,0"
-                                            BackgroundColor="Gray"
-                                            HeightRequest="1"/>
                                     </StackLayout>
-                                </ViewCell>
+                                </Frame>
                             </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
 
                 </StackLayout>
             </Frame>

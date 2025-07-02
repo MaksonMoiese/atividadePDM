@@ -10,6 +10,6 @@ public partial class Show : ContentPage
 	{
         InitializeComponent();
 		listaAnimais.ItemsSource = animal;
-		    
+		BindingContext = this;
     }
 }

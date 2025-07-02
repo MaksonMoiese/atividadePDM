@@ -14,6 +14,7 @@ namespace ProjetoElemento
 
         public Cadastro(ObservableCollection<Animal> listaAnimais)
         {
+            InitializeComponent();
         }
 
         private void Salvar(object sender, EventArgs e)
@@ -30,28 +31,15 @@ namespace ProjetoElemento
             listaAnimais.Add(animal);
 
             DisplayAlert("Aviso", resposta, "OK");
-            ApagaTudo();
         }
 
-        private void Limpar(object sender, EventArgs e)
+        private void Limpar(object sender, EventArgs e) 
         {
-            var resposta = await DisplayAlert("Tem Certeza?",
-                "Todo o conteúdo do formulário será perdido",
-                "sim", "não");
-            if (resposta)
-            {
-                ApagaTudo();
-
-                await DisplayAlert("Apagou", "Tudo foi apagado", "OK");
-            }
-        }
-        public void ApagaTudo()
-        {
-            nome.Text = "";
-            idade.Text = "";
-            dono.Text = "";
-            especie.Text = "";
-            motivo.Text = "";
+            nome.Text = string.Empty;
+            idade.Text = string.Empty;
+            dono.Text = string.Empty;
+            especie.Text = string.Empty;
+            motivo.Text = string.Empty;
         }
     }
 }
