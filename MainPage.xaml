@@ -7,13 +7,16 @@
     <ScrollView>
         <StackLayout Margin="40">
             <VerticalStackLayout>
-                <Label Text="Bem-vindo ao sistema de gerenciamento PetCare!" 
+                
+                <Label Text="Bem-vindo ao Petshop" 
                        FontSize="24" 
                        HorizontalOptions="Center" 
                        Margin="0,0,0,20"/>
-                <Button Clicked="Mostrar" Text="Ver Animais Cadastrados"/>
-                <Label/>
                 <Button Clicked="Cadastrar" Text="Cadastrar Animais"/>
+                <Label/>
+                <Button Clicked="Mostrar" Text=" Visualizar Animais Cadastrados"/>
+                
+                
             </VerticalStackLayout>
         </StackLayout>
     </ScrollView>

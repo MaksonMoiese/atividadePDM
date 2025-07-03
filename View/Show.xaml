@@ -42,7 +42,7 @@
                                         </StackLayout>
 
                                         <StackLayout Orientation="Horizontal">
-                                            <Label Text="Motivo: " />
+                                            <Label Text="Causa: " />
                                             <Label FontSize="12" Text="{Binding Motivo}" />
                                         </StackLayout>
                                     </StackLayout>

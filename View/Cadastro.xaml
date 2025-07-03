@@ -19,7 +19,7 @@
                 <Label Text="Espécie:" />
                 <Entry x:Name="especie" Placeholder="Digite a espécie" />
 
-                <Label Text="Motivo" />
+                <Label Text="Causa:" />
                 <Entry x:Name="motivo" Placeholder="Digite o motivo" />
                 
             </VerticalStackLayout>
